@@ -56,6 +56,8 @@ const Star: React.FunctionComponent<StarProps> = props => {
 
   const starSource =
     fill && selectedColor === null ? STAR_SELECTED_IMAGE : starImage;
+  const tintColor =
+    fill && selectedColor ? selectedColor : unSelectedColor;
 
   return (
     <TouchableOpacity activeOpacity={1} onPress={spring} disabled={isDisabled}>
@@ -64,7 +66,7 @@ const Star: React.FunctionComponent<StarProps> = props => {
         style={[
           styles.starStyle,
           {
-            tintColor: fill && selectedColor ? selectedColor : unSelectedColor,
+            tintColor,
             width: size || STAR_SIZE,
             height: size || STAR_SIZE,
             transform: [{ scale: springValue }]
@@ -78,8 +80,7 @@ const Star: React.FunctionComponent<StarProps> = props => {
 
 Star.defaultProps = {
   starImage: STAR_IMAGE,
-  selectedColor: "#f1c40f",
-  unSelectedColor: "#BDC3C7"
+  selectedColor: "#f1c40f"
 };
 
 export default Star;
