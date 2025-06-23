@@ -1,0 +1,17 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: meliuz/react-native-ratings
+  description: '## Demo - [try it now](https://expo.io/@monte9/react-native-ratings)
+
+
+    ![Demo gif](./resources/airbnb_ratings.gif)
+
+    '
+  name: react-native-ratings
+spec:
+  lifecycle: production
+  type: service
