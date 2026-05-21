@@ -15,3 +15,4 @@ metadata:
 spec:
   lifecycle: production
   type: service
+  owner: conta-digital-onboarding
